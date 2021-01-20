@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
 
 @import './animate.css';
+@import './popup.css';
 
 * {
     padding: 0;
@@ -10,6 +11,9 @@ body {
     font-family: 'Oswald' , sans-serif;
     font-style: normal;
     background-color: #E5E5E5;
+}
+body.hidden {
+    overflow: hidden;
 }
 .header {
     text-align: center;
@@ -210,13 +214,18 @@ nav {
 }
 .own__container ,
 .ownproj__request,
-.activity__row {
+.activity__row,
+.ownproj__btn {
     display: flex;
 }
 .own__container {
     justify-content: space-between;
 }
-.ownproj__request {
+.ownproj__request,
+.ownproj__btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
     background-color: #FFFFFF;
     align-items: center;
     padding: 14px 30px;
@@ -240,7 +249,8 @@ nav {
     text-decoration: none;
     color: black;
 }
-.ownproj__request:hover {
+.ownproj__request:hover,
+.ownproj__btn:hover {
     background-color: silver;
 }
 .ownproj__description {
